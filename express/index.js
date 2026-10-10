@@ -27,6 +27,14 @@ app.post('/estudiante',function(request, response){
     return response.status(201).json({message:"Estudiante creado exitosamente"});
 })
 
+app.get('/estudiante/:carnet',function(request, response){
+    const carnet = request.params.carnet;
+    const estudiante = existeEstudiante(carnet);
+    if(!estudiante)
+        return response.status(404).json({error: 'El estudiante no existe'});
+    return response.json(estudiante);
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
