@@ -1,0 +1,26 @@
+# Dependencias (ignora todos los node_modules en cualquier subcarpeta)
+node_modules/
+
+# Archivos de entorno y credenciales
+.env
+.env.local
+.env.*.local
+
+# Archivos de registros (logs)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Compilados y builds generados
+dist/
+build/
+.next/
+.nuxt/
+.output/
+
+# Archivos del sistema operativo y editores de código
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
